@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imaginelenses.kalmandesk.ServerController">
+    <padding>
+        <Insets bottom="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="title" text="Scan QR code to get started.">
+      <font>
+         <Font name="Ubuntu Bold" size="19.0" />
+      </font></Label>
+    <ImageView fx:id="qrCode" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" scaleX="1.15" scaleY="1.15" style="-fx-view-order: 5;" VBox.vgrow="ALWAYS">
+      <VBox.margin>
+         <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0" />
+      </VBox.margin></ImageView>
+    <Hyperlink fx:id="link" onAction="#onClick" style="-fx-border-color: transparent; -fx-border-insets: 0, 0, 4, 0; -fx-text-fill: blue;" text="http://000.000.000.000:0000">
+      <font>
+         <Font name="Ubuntu Mono" size="19.0" />
+      </font></Hyperlink>
+    <Label fx:id="footer" graphicTextGap="10.0" text="IMAGINELENSES" textFill="#0000006d">
+      <font>
+         <Font name="Ubuntu Medium" size="14.0" />
+      </font></Label>
+
+</VBox>
