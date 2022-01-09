@@ -2,14 +2,17 @@
 
 A tool to implement and understand [Kalman Filters](https://en.wikipedia.org/wiki/Kalman_filter).
 
-Kalman Desktop along with [Kalman Mobile]() is a Server-Client pair that reads the accelerometer readings from an Android device and sends them over to a desktop application over websockets.
+Kalman Desktop along with [Kalman Mobile](https://github.com/imaginelenses/kalmanMobile) is a Server-Client pair that reads the accelerometer readings from an Android device and sends them over to a desktop application over websockets.
 It then moves the cursor on the screen according to the change in acceleration of the mobile device.
-
 
 A `DataObject` is recieved which contains acceleration along `x`, `y` and `z` in m/s<sup>2</sup> and a [`timestamp`](https://developer.android.com/reference/android/hardware/SensorEvent#timestamp) in nanoseconds (time since the device has been on).
 
 ### Note
 Kalman mobile reads [`Sensor.TYPE_ACCELEROMETER`](https://developer.android.com/reference/android/hardware/SensorEvent#sensor.type_accelerometer:) and **not** [`Sensor.TYPE_ACCELEROMETER_UNCALIBRATED`](https://developer.android.com/reference/android/hardware/SensorEvent#sensor.type_accelerometer_uncalibrated:). Meaning it is bias compensated. 
+
+## TODO
+1. Implement Kalman filter
+2. Host index.html with JS client for easy testing
 
 ## Moving the cursor
 ```java
